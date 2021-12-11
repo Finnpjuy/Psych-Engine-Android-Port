@@ -901,7 +901,15 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
+		var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("mod portado por finn x "), 24);
+        creditTxt.scrollFactor.set();
+        creditTxt.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        creditTxt.borderColor = FlxColor.BLACK;
+        creditTxt.borderSize = 3;
+        creditTxt.borderStyle = FlxTextBorderStyle.OUTLINE;
+        add(creditTxt);
+
+scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
@@ -4079,4 +4087,4 @@ class PlayState extends MusicBeatState
 
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;
-}
+} 
